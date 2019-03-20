@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=yes">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title></title>
+  <script src="./static/vconsole.min.js"></script>
+  <script src="./static/jquery.min.js"></script>
+  <script type="text/javascript">
+    var url = window.location.href
+    var _hmt
+    if (url.indexOf('siteId=1') != -1 && localStorage.getItem('siteId') == '1' || localStorage.getItem('siteId') == '31' || localStorage.getItem('siteId') == '32') {
+      _hmt = _hmt || [];
+
+      (function () {
+
+        var hm = document.createElement("script");
+
+        hm.src = "https://hm.baidu.com/hm.js?00535435cc4a9863cbb36ed0732cda15";
+
+        var s = document.getElementsByTagName("script")[0];
+
+        s.parentNode.insertBefore(hm, s);
+
+      })();
+    } else {
+      _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+
+        hm.src = "https://hm.baidu.com/hm.js?5b11d7f4ac737d318c272ee677a45efe";
+
+        var s = document.getElementsByTagName("script")[0];
+
+        s.parentNode.insertBefore(hm, s);
+      })();
+    }
+    window.onerror = function (message, source, lineno, colno, error) {
+      $.ajax({
+        url: '/api/upclienterror',
+        method: 'get',
+        data: {
+          token: localStorage.getItem('token') || '',
+          error: error
+        }
+      })
+    }
+
+ // var vc = new VConsole()
+  // var vc = new VConsole()
+  // console.log(window.location.href)
+
+    //document.domain = "ycb51.cn";
+
+  </script>
+
+</head>
+
+<body>
+  <div id="app">
+
+  </div>
+  <!-- built files will be auto injected -->
+</body>
+<script>
+</script>
+
+</html>

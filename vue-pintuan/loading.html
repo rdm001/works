@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>loading</title>
+
+  <style>
+    body,html{
+      height:100%;
+      width:100%;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size:30px;
+      flex-wrap: wrap;
+    }
+    div{
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <p>系统升级中...</p>
+  <p>请稍等半小时</p>
+
+</div>
+<script>
+  var form = ' <form id="paySubmit" action="https://netpay.cmbchina.com/netpayment/BaseHttp.dll?MB_EUserPay" method="post" > <input type="hidden"
+  name="jsonRequestData"
+  value='{"dateTime":"20180911135127","date":"20180911","extendInfoEncrypType":"","amount":"0.01","orderNo":"DD2018091101507672637450","payNoticePara":"","riskLevel":"","cardType":"","mobile":"","merchantSerialNo":"180911135127073","agrNo":"180911135127073ou35i","lon":"","extendInfo":"","userID":"129432","signNoticePara":"","signNoticeUrl":"":"https://zhapp.whecb.com/api/zh/1/signNotice","c","clientIP":"","expireTimeSpan":"8","payNoticeUrl":"":"https://zhapp.whecb.com/api/zh/1/payNotice","r","returnUrl":"":"https://zhapp.whecb.com/#/pay/success?siteId=1","l","lat":"","branchNo":"0027","merchantNo":"630052"}' />
+    <input type="hidden" name="charset" value='UTF-8' />
+    <input type="submit" value="测试支付"></form>
+    <script>
+    document.forms["paySubmit"].submit();
+  document.getElementById("paySubmit").submit()
+</script>'
+</script>
+
+
+</body>
+</html>

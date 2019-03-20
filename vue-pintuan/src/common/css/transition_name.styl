@@ -1,0 +1,41 @@
+.opacity-enter,.opacity-leave-to
+  opacity 0
+.opacity-leave,.opacity-enter-to
+  opacity 1
+.opacity-leave-active,.opacity-enter-active
+  transition all linear 0.2s
+.moveRight-enter,.moveRight-leave-to
+  transform  translateX(100%)
+.moveRight-leave,.moveRight-enter-to
+  transform  translateX(0)
+.moveRight-leave-active,.moveRight-enter-active
+  transition all linear 0.2s
+
+.moveBottom-enter,.moveBottom-leave-to
+  transform  translateY(100%)
+.moveBottom-leave,.moveBottom-enter-to
+  transform  translateY(0)
+.moveBottom-leave-active,.moveBottom-enter-active
+  transition all linear 0.2s
+
+
+.toRight-enter,.toRight-leave-to
+  transform translateX(-100%)
+.toRight-enter-to,.toRight-leave
+  transform translateX(0)
+.toRight-leave-active,.toRight-enter-active
+  transition all linear 0.3s
+.toLeft-enter,.toLeft-leave-to
+  transform translateX(100%)
+.toLeft-enter-to,.toLeft-leave
+  transform translateX(0)
+.toLeft-leave-active,.toLeft-enter-active
+  transition all linear 0.3s
+
+
+.bounceIn-enter,.bounceIn-leave-to
+  transform scale3d(0,0,0)
+.bounceIn-enter-to,.bounceIn-leave
+  transform scale3d(1,1,1)
+.bounceIn-leave-active,.bounceIn-enter-active
+  transition all cubic-bezier(0.215,.610,.355,1.000) 0.3s
